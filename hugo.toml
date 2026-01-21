@@ -4,6 +4,7 @@ title = 'Thomas van Maaren'
 theme = 'ananke'
 
 [params]
+  math = true
   subtitle = 'Member of the species Homo Sapiens'
   [params.contact]
     email = 'thomas.v.maaren@outlook.com'
@@ -11,3 +12,12 @@ theme = 'ananke'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

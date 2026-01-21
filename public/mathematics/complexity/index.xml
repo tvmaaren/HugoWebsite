@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Complexity theory on Thomas van Maaren</title>
+    <link>http://localhost:1313/mathematics/complexity/</link>
+    <description>Recent content in Complexity theory on Thomas van Maaren</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jan 2026 13:36:43 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/mathematics/complexity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proof Complexity</title>
+      <link>http://localhost:1313/mathematics/complexity/proof-complexity/</link>
+      <pubDate>Wed, 21 Jan 2026 13:36:43 +0100</pubDate>
+      <guid>http://localhost:1313/mathematics/complexity/proof-complexity/</guid>
+      <description>&lt;p&gt;We know that any propositional formula has a proof. Now we are interested if every propositional formula has a &amp;ldquo;short&amp;rdquo; proof. Where &amp;ldquo;short&amp;rdquo; means polynomial given the size of the propositional formula.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
