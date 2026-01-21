@@ -1,7 +1,12 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Thomas van Maaren'
 theme = 'ananke'
+
+[params]
+  subtitle = 'Member of the species Homo Sapiens'
+  [params.contact]
+    email = 'thomas.v.maaren@outlook.com'
 
 [caches]
   [caches.images]
