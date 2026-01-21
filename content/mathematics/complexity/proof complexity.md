@@ -1,6 +1,5 @@
 +++
 date = '2026-01-21T13:36:43+01:00'
-draft = true
 title = 'Proof Complexity'
 +++
 
