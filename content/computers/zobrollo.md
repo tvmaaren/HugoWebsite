@@ -4,4 +4,4 @@ draft = true
 title = 'Zobrollo'
 +++
 
-A 2d racing game
+A 2d racing game written in C
