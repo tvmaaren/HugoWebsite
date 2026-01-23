@@ -12,7 +12,7 @@ Hello, this is me attempting to learn the material before I have my exam next we
 
 - [ ] Chapter 2 except theorem 2.5.1 and 2.6
 - [ ] Chapter 3
-- [ ] Chapter 4
+- [x] Chapter 4
 - [ ] Chapter 5 except 5.5 and 5.6
 - [ ] Chapter 6 except 6.4
 - [ ] Chapter 7
