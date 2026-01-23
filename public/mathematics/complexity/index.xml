@@ -6,8 +6,15 @@
     <description>Recent content in Complexity theory on Thomas van Maaren</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jan 2026 13:36:43 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jan 2026 15:24:10 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/mathematics/complexity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 4 Relativized computation and the polynomial hierarchy</title>
+      <link>http://localhost:1313/mathematics/complexity/relativized/</link>
+      <pubDate>Thu, 22 Jan 2026 15:24:10 +0100</pubDate>
+      <guid>http://localhost:1313/mathematics/complexity/relativized/</guid>
+      <description>&lt;h1 id=&#34;relativized-computation&#34;&gt;Relativized computation&lt;/h1&gt;&#xA;&lt;p&gt;An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt; Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt; A set \(A\) &lt;em&gt;Turing reduces&lt;/em&gt; to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Proposition&lt;/strong&gt; \(A\leq_m^p B \implies A\leq_T^p B\)&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Chapter 11 Proof Complexity</title>
       <link>http://localhost:1313/mathematics/complexity/proof-complexity/</link>

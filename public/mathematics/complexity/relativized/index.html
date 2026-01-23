@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Chapter 4 Relativized computation and the polynomial hierarchy | Thomas van Maaren</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Relativized computation
+An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.
+Definition Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).
+Definition A set \(A\) Turing reduces to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.
+Proposition \(A\leq_m^p B \implies A\leq_T^p B\)">
+    <meta name="generator" content="Hugo 0.154.5">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/mathematics/complexity/relativized/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/mathematics/complexity/relativized/">
+  <meta property="og:site_name" content="Thomas van Maaren">
+  <meta property="og:title" content="Chapter 4 Relativized computation and the polynomial hierarchy">
+  <meta property="og:description" content="Relativized computation An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.
+Definition Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).
+Definition A set \(A\) Turing reduces to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.
+Proposition \(A\leq_m^p B \implies A\leq_T^p B\)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="mathematics">
+    <meta property="article:published_time" content="2026-01-22T15:24:10+01:00">
+    <meta property="article:modified_time" content="2026-01-22T15:24:10+01:00">
+
+  <meta itemprop="name" content="Chapter 4 Relativized computation and the polynomial hierarchy">
+  <meta itemprop="description" content="Relativized computation An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.
+Definition Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).
+Definition A set \(A\) Turing reduces to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.
+Proposition \(A\leq_m^p B \implies A\leq_T^p B\)">
+  <meta itemprop="datePublished" content="2026-01-22T15:24:10+01:00">
+  <meta itemprop="dateModified" content="2026-01-22T15:24:10+01:00">
+  <meta itemprop="wordCount" content="414">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chapter 4 Relativized computation and the polynomial hierarchy">
+  <meta name="twitter:description" content="Relativized computation An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.
+Definition Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).
+Definition A set \(A\) Turing reduces to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.
+Proposition \(A\leq_m^p B \implies A\leq_T^p B\)">
+
+	
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+    
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-relativized">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Thomas van Maaren
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/computers/" title="Computers page">
+              Computers
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/mathematics/" title="Mathematics page">
+              Mathematics
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-relativized flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Complexity theory
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Chapter 4 Relativized computation and the polynomial hierarchy</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-01-22T15:24:10+01:00">January 22, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="relativized-computation">Relativized computation</h1>
+<p>An oracle Turing machine is a machine which has a lookup table (oracle) which has constant lookup time. This lookup table can be read from and written to.</p>
+<p><strong>Definition</strong> Given oracle turing machine \(M\), we let \(M^B\) be the function computed using oracle \(B\).</p>
+<p><strong>Definition</strong> A set \(A\) <em>Turing reduces</em> to \(B\) denoted \(A\leq_T^p B\), if \(A=M^B\) for some machine \(M\) working in polynomial time.</p>
+<p><strong>Proposition</strong> \(A\leq_m^p B \implies A\leq_T^p B\)</p>
+<p><strong>Proof</strong></p>
+<p>Assume that \(A\leq_m^p B\), then there exists a polynomial time function \(f\) such that \(a\in A \iff f(a)\in B\). If we let \(M\) be the machine that computes \(f\) and then checks if it is part of the oracle, we see that \(A=M^B\).</p>
+<p><strong>End Proof</strong></p>
+<p><strong>Proposition</strong></p>
+<ol>
+<li>\(\leq_T^p\) is reflexive and transitive</li>
+<li>\(A\leq_T^p \iff \overline{A}\leq_m^p \overline{B}\).</li>
+<li>If \(A\in P\) then \(A\leq_m^p B\) for every set \(B\) that is not empty or equal to \(\{0,1\}^*\).</li>
+<li>\(A\leq_T^p C \land B\leq_T^p C \implies A\oplus B \leq_T^p C\).</li>
+<li>\(A\leq_T^p B \implies \overline{A}\leq_T^p B\).</li>
+</ol>
+<p>All these properties are also met by \(\leq_m^p\) except of 5. We have this now because taking the complement of our machine \(M\) is still is a polynomial time machine.</p>
+<p><strong>Proposition</strong>
+</p>
+\[\text{NP}(\text{P}^{\mathcal{C}})=\text{NP}(\mathcal{C}).\]<p>
+<strong>Proof</strong>
+</p>
+\[
+\begin{aligned}
+\text{NP}(\text{P}^{\mathcal{C}}) &= \bigcup \{\text{NP}^C\mid C\in P^\mathcal{C}\} \\
+&= \bigcup \{\text{NP}^C\mid C\in P^D \exists D\in \mathcal{C}\}\\
+&= \bigcup \{\text{NP}^C\mid C\in P^D \exists D\in \mathcal{C}\}\\
+&= \bigcup \{\text{NP}^{M^D}\mid \exists D\in \mathcal{C},M\text{ polynomial}\}\\
+&= \bigcup \{\text{NP}^{M^D}\mid \exists D\in \mathcal{C},M\text{ polynomial},N\text{ nondeterministic polynomial}\}\\
+&= \bigcup \{N^{M^D}\mid \exists D\in \mathcal{C},M\text{ polynomial},N\text{ nondeterministic polynomial}\}\\
+&= \bigcup \{M^D\mid \exists D\in \mathcal{C},M\text{ nondeterministic polynomial}\}\\
+&= \text{NP}^\mathcal{C}
+\end{aligned}
+\]<p>
+<strong>End Proof</strong></p>
+<h1 id="the-polynomial-hierarchy">The polynomial hierarchy</h1>
+<p>We inductively define the polynomial hierarchy as follows</p>
+<ul>
+<li>\(\Sigma_0^p=\Pi_0^p=P\)</li>
+<li>\(\Sigma_{n+1}^p=\text{NP}(\Sigma_n^p)\)</li>
+<li>\(\Pi_{n}^p=\text{CO-}\Sigma_{n}^p\)</li>
+<li>\(\Delta_{n+1}^p=P(\Sigma_n^p)\)</li>
+<li>\(PH=\bigcup_{n\geq 0}\Sigma_n^p\)</li>
+</ul>
+<p>Observe \(\Sigma_{n}^p,\Pi_{n}^p \subset \Delta_{n+1}^p \subset \Sigma_{n+1}^p,\Pi_{n+1}^p\)</p>
+<p><strong>Proposition</strong></p>
+<ol>
+<li>\(\Delta_1^p = P\)</li>
+<li>\(\Pi^p_{n+1} = (\text{co-NP})(\Sigma_n^p)\)</li>
+<li>\(\Sigma^p_{n+1} = \text{NP}(\Pi_n^p)\)</li>
+<li>\(\Delta^p_{n+1} = \text{P}(\Pi_n^p)\)</li>
+<li>\(\Sigma^p_{n+1} = \text{NP}(\Delta_{n+1}^p)\)</li>
+</ol>
+<p><strong>Definition</strong></p>
+<ul>
+<li>\(\exists^{p(n)}xR(x)\iff \exists x, |x|\leq p(n) \land R(x)\)</li>
+<li>\(\forall^{p(n)}xR(x)\iff \forall x, |x|\leq p(n) \implies R(x)\)</li>
+<li>\(\exists \mathcal{C} := \{\{x \mid \exists^{p(|x|)}y,\langle x,y\rangle \in B\}\mid p\text{ polynomial},B\in \mathcal{C}\}\)</li>
+<li>\(\forall \mathcal{C} := \{\{x \mid \forall^{p(|x|)}y,\langle x,y\rangle \in B\}\mid p\text{ polynomial},B\in \mathcal{C}\}\)</li>
+</ul>
+<p><strong>Proposition</strong> \(\text{PH}\subseteq \text{PSPACE}\).</p>
+<p><strong>Proof</strong>
+Induction
+<strong>End Proof</strong></p>
+<p><strong>Proposition</strong> If PH=PSPACE then PH collapses.</p>
+<p><strong>Proof</strong></p>
+<p>Apparently there exists problem called QBF\(\in\)PSPACE such that A\(\leq_m^p\) QBF for all A\(\in\)PSPACE. If PH=PSPACE, then QBF\(\in\Sigma_n^p\) for some n and because \(\Sigma_n^p\) is downwardly closed PSPACE=\(\Sigma_n^p\).</p>
+<p><strong>End Proof</strong></p>
+<p>If we take \(\text{QBF}_k\subset \text{QBF}\) as the set of true closed formulas with \(k-1\) quantifier alternations it turns out that \(\text{QBF}_k\) is \(\Sigma_k^p\). In case \(k=1\) this is clearly true as \(\text{QBF}_1=\text{SAT}\) and \(\Sigma_k^1=\text{NP}\)</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Thomas van Maaren 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
